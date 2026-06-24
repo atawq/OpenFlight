@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFlight - Open-Source Flight Simulator</title>
+    <meta name="description"
+        content="OpenFlight: an open-source, browser-based flight simulator with real-world terrain, multiple vehicles, and modern visuals.">
+    <style>
+        html,
+        body,
+        #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: "Inter", "Open Sans", Arial, sans-serif;
+            background: #020308;
+        }
+
+        #react-root {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        #react-root>* {
+            pointer-events: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cesiumContainer"></div>
+    <div id="react-root"></div>
+    <script type="module" src="./src/main-cesium-react.ts"></script>
+</body>
+
+</html>
